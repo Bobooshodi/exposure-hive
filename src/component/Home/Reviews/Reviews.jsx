@@ -11,7 +11,20 @@ const Reviews = () => {
     SwiperCore.use([Pagination, Autoplay]);
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        setReviews([]);
+        setReviews([
+            {
+                name: 'Kuriko Sama',
+                address: 'Kuala Lumpur',
+                description: 'Very Nice',
+                img: ''
+            },
+            {
+                name: 'Duba',
+                address: 'Kuala Lumpur',
+                description: 'Very Nice',
+                img: ''
+            }
+        ]);
     }, [])
     return (
         <section id="testimonial">

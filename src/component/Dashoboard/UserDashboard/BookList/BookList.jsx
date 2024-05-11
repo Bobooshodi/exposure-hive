@@ -15,8 +15,13 @@ const BookList = () => {
     const [isUpdated, setIsUpdated] = useState(false);
 
     useEffect(() => {
-        axios.get(`https://immense-river-40491.herokuapp.com/bookingList?email=${user.email}`)
-        .then(res => setBookings(res.data))
+        setBookings([{
+            _id: '0001',
+            serviceName: 'Test Service 001',
+            status: 'ACTIVE',
+            description: 'Test Description 001',
+            img: '',
+        }]);
     },[user.email, isUpdated])
 
     const handleDelete = (id, status) => {
@@ -50,7 +55,7 @@ const BookList = () => {
                         icon: "error",
                       });
                 })
-            } 
+            }
           });
     }
     return (
@@ -69,7 +74,7 @@ const BookList = () => {
                                 </div>
                                 <h6>{serviceName}</h6>
                                 <p>{description}</p>
-                                <Button variant="outline-danger" onClick={() => handleDelete(_id, status)}> 
+                                <Button variant="outline-danger" onClick={() => handleDelete(_id, status)}>
                                     <FontAwesomeIcon icon={faTimesCircle}/>
                                      { status === 'Done' ? 'Remove':'Cancel'}
                                 </Button>

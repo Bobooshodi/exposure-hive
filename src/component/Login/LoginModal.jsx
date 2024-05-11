@@ -28,25 +28,8 @@ const Form = () => {
       toast.success('Successfully Logged In!');
       history(from);
     }
-    if (res.email === "admin@mail.com") {
-      swal({
-        title: "Warning!",
-        text: "You have entered the admin panel for testing. Please don't abuse this facility!",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-      }).then(ok => {
-          if (!ok) {
-              handleSignOut()
-                .then(res => {
-                    dispatch({type: SET_USER, payload: res})
-                    toast.error('Logged Out!');
-                })
-          }
-        });
-    }
   }
-  
+
   return (
     <div className={`${ isSignUp ? "fContainer sign-up-mode" : "fContainer"}`}>
         <Link to="/">

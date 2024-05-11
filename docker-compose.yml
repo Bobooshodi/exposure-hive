@@ -1,0 +1,11 @@
+# docker-compose.yaml
+version: '3.8'
+
+services:
+  frontend:
+    container_name: exposure-hive-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:80"

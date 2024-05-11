@@ -2,7 +2,16 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart, faCommentAlt, faUserPlus, faCog, faFileMedical, faList, faUserCircle} from '@fortawesome/free-solid-svg-icons'
+import {
+    faShoppingCart,
+    faCommentAlt,
+    faUserPlus,
+    faCog,
+    faFileMedical,
+    faList,
+    faUserCircle,
+    faChartPie
+} from '@fortawesome/free-solid-svg-icons'
 import { faBuffer } from '@fortawesome/free-brands-svg-icons';
 import { useAppContext } from '../../../context';
 import {faChartBar} from "@fortawesome/free-regular-svg-icons";
@@ -56,21 +65,27 @@ const Sidebar = ({setTitle}) => {
                         :
                         <>
                             <li>
-                                <NavLink onClick={() => setTitle('Book')} activeclassname="activePage" exact to="/dashboard/book">
-                                    <FontAwesomeIcon icon={faShoppingCart} className="iconC"/>
-                                    Book
+                                <NavLink onClick={() => setTitle('Campaign')} activeclassname="activePage" exact to="/dashboard/campaign">
+                                    <FontAwesomeIcon icon={faChartPie} className="iconC"/>
+                                    Campaign
                                 </NavLink>
                             </li>
+                            {/*<li>*/}
+                            {/*    <NavLink onClick={() => setTitle('Book')} activeclassname="activePage" exact to="/dashboard/book">*/}
+                            {/*        <FontAwesomeIcon icon={faShoppingCart} className="iconC"/>*/}
+                            {/*        Book*/}
+                            {/*    </NavLink>*/}
+                            {/*</li>*/}
                             <li>
-                                <NavLink onClick={() => setTitle('Booking List')} activeclassname="activePage" to="/dashboard/booking">
+                                <NavLink onClick={() => setTitle('Previous Campaigns')} activeclassname="activePage" to="/dashboard/campaigns">
                                     <FontAwesomeIcon icon={faList} className="iconC"/>
-                                    Booking List
+                                     Previous Campaigns
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink onClick={() => setTitle('Review')} activeclassname="activePage" to="/dashboard/review">
+                                <NavLink onClick={() => setTitle('Campaign Analytics')} activeclassname="activePage" to="/dashboard/analytics">
                                     <FontAwesomeIcon icon={faCommentAlt} className="iconC"/>
-                                     Review
+                                     Analytics
                                 </NavLink>
                             </li>
                         </>

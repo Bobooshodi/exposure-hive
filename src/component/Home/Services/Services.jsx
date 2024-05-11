@@ -7,7 +7,14 @@ const Services = () => {
     const [services, setServices] = useState([])
 
     useEffect(() => {
-        setServices([]);
+        setServices([
+            {
+                name: 'Digital Marketing',
+                price: '50',
+                description: 'Online marketing',
+                img: '',
+            }
+        ]);
     }, [])
 
     return (
