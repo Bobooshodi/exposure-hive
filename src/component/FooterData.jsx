@@ -24,7 +24,7 @@ export const otherLinks = [
 ]
 
 export const footerInfo = [
-    {icon: faBuffer, info1: 'EASY CONSULTING', id: 1},
-    {icon: faMobileAlt, info1: '+13322176301', info2: 'ujjalzaman@gmail.com', id: 2},
+    {icon: faBuffer, info1: 'EXPOSURE HIVE', id: 1},
+    {icon: faMobileAlt, info1: '+60182284517', info2: 'info@exposurehive.com', id: 2},
     {icon: faMapMarkedAlt, info1: 'bronx,new york, USA', info2: 'Nevada,USA', id: 3}
 ];

@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faCommentAlt, faUserPlus, faCog, faFileMedical, faList, faUserCircle} from '@fortawesome/free-solid-svg-icons'
 import { faBuffer } from '@fortawesome/free-brands-svg-icons';
 import { useAppContext } from '../../../context';
+import {faChartBar} from "@fortawesome/free-regular-svg-icons";
 
 const Sidebar = ({setTitle}) => {
     const { state: { admin } } = useAppContext()
@@ -13,35 +14,35 @@ const Sidebar = ({setTitle}) => {
         <div>
             <div className="sideBrand">
                 <div className="sideBrnIcon">
-                    <FontAwesomeIcon icon={faBuffer}/>
+                    <FontAwesomeIcon icon={faChartBar}/>
                     </div>
-                <h2>Easy <span className="navHighlight">Consulting</span></h2>
+                <h2>Exposure <span className="navHighlight">Hive</span></h2>
             </div>
             <nav id="sideNavbar">
-                <ul>    
+                <ul>
                         <li>
                             <NavLink onClick={() => setTitle('Profile')} activeclassname="activePage" exact to="/dashboard/profile">
-                                <FontAwesomeIcon icon={faUserCircle} className="iconC"/> 
+                                <FontAwesomeIcon icon={faUserCircle} className="iconC"/>
                                 Profile
                             </NavLink>
                         </li>
-                    {admin ? 
+                    {admin ?
                         <>
                             <li>
                                 <NavLink onClick={() => setTitle('Order List')} activeclassname="activePage" to="/dashboard/orderList">
-                                    <FontAwesomeIcon icon={faList} className="iconC"/> 
+                                    <FontAwesomeIcon icon={faList} className="iconC"/>
                                     Order list
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink onClick={() => setTitle('Add Service')} activeclassname="activePage" to="/dashboard/addService">
-                                    <FontAwesomeIcon icon={faFileMedical} className="iconC"/> 
+                                    <FontAwesomeIcon icon={faFileMedical} className="iconC"/>
                                     Add Service
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink onClick={() => setTitle('Make Admin')} activeclassname="activePage" to="/dashboard/makeAdmin">
-                                    <FontAwesomeIcon icon={faUserPlus} className="iconC"/> 
+                                    <FontAwesomeIcon icon={faUserPlus} className="iconC"/>
                                     Make Admin
                                 </NavLink>
                             </li>
@@ -56,13 +57,13 @@ const Sidebar = ({setTitle}) => {
                         <>
                             <li>
                                 <NavLink onClick={() => setTitle('Book')} activeclassname="activePage" exact to="/dashboard/book">
-                                    <FontAwesomeIcon icon={faShoppingCart} className="iconC"/> 
+                                    <FontAwesomeIcon icon={faShoppingCart} className="iconC"/>
                                     Book
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink onClick={() => setTitle('Booking List')} activeclassname="activePage" to="/dashboard/booking">
-                                    <FontAwesomeIcon icon={faList} className="iconC"/> 
+                                    <FontAwesomeIcon icon={faList} className="iconC"/>
                                     Booking List
                                 </NavLink>
                             </li>
@@ -73,7 +74,7 @@ const Sidebar = ({setTitle}) => {
                                 </NavLink>
                             </li>
                         </>
-                     } 
+                     }
                 </ul>
             </nav>
         </div>

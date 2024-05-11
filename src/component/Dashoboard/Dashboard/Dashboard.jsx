@@ -13,7 +13,7 @@ import { SET_ADMIN, useAppContext } from '../../../context';
 const Dashboard = () => {
     const { state: { user, admin }, dispatch } = useAppContext()
     const [sideToggle, setSideToggle] = useState(false)
-    const [title, setTitle] = useState('Easy Consulting')
+    const [title, setTitle] = useState('Exposure Hive')
 
     useEffect(() => {
         axios.get(`https://immense-river-40491.herokuapp.com/admin?email=${user.email}`)
@@ -31,7 +31,7 @@ const Dashboard = () => {
                     <Sidebar setTitle={setTitle}/>
                     <div className="backBtnBox">
                         <Link to="/">
-                            <button className="backBtn"> 
+                            <button className="backBtn">
                             <FontAwesomeIcon icon={faSignOutAlt}/>
                              back to home</button>
                         </Link>
@@ -53,11 +53,11 @@ const Dashboard = () => {
                         </div>
                         <h3>{title}</h3>
                     </div>
-                    <PopOver/> 
+                    <PopOver/>
                 </div>
                  {
                     admin ? <AdminDashboard/> : <UserDashboard/>
-                } 
+                }
             </div>
         </div>
     )

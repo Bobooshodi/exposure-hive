@@ -24,8 +24,8 @@ const Hero = () => {
                             color="text.primary"
                             sx={{ fontWeight: 700 }}
                         >
-                            Easy Consulting{' '} <br />
-                            Start Your {' '}
+                            Exposure Hive{' '} <br />
+                            Expose Your {' '}
                             <Typography
                                 color={'primary'}
                                 component={'span'}

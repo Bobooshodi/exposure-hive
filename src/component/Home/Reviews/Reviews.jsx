@@ -11,11 +11,7 @@ const Reviews = () => {
     SwiperCore.use([Pagination, Autoplay]);
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('https://immense-river-40491.herokuapp.com/reviews')
-        .then(res => res.json())
-        .then(data => {
-            setReviews(data);
-        })
+        setReviews([]);
     }, [])
     return (
         <section id="testimonial">
@@ -24,7 +20,7 @@ const Reviews = () => {
                 <h3 className="sectionTitle">WHAT OUR CLIENTS SAY’S</h3>
             </div>
             <Col md={11} className="mx-auto">
-                <Swiper 
+                <Swiper
                     pagination={{ clickable: true }}
                     slidesPerView={3}
                     breakpoints={{
@@ -47,12 +43,12 @@ const Reviews = () => {
                     }}
                     spaceBetween={10}
                     >
-                    
+
                     {
-                        reviews.length === 0 ? 
+                        reviews.length === 0 ?
                             <div className="text-center">
                                 <Spinner/>
-                            </div>: 
+                            </div>:
                             reviews.map((review, id) => {
                                 return(
                                     <SwiperSlide key={id}>
